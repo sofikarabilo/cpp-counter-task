@@ -1,9 +1,7 @@
-
 #include <cstdint>
 #include <iostream>
 
 int main() {
-    // Part 1: uint8_t counter overflow
     std::uint8_t trip = 0;
 
     for (int km = 0; km < 300; ++km) {
@@ -13,13 +11,11 @@ int main() {
     std::cout << "Part 1 - trip: "
               << static_cast<int>(trip) << '\n';
 
-    // Part 1: GPS week number rollover
     int week = 1023;
     week = (week + 1) % 1024;
 
     std::cout << "GPS week: " << week << '\n';
 
-    // Part 2: uint16_t counter overflow
     std::uint16_t trip16 = 65000;
     unsigned int km16 = 0;
 
