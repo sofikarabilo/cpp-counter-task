@@ -11,4 +11,4 @@ int main() {
     } while (trip != 0);
 
     std::cout << km << '\n';
-
+}
