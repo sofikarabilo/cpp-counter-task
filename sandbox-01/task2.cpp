@@ -1,13 +1,17 @@
+#include <iomanip>
 #include <iostream>
  
-int next_pow2(int x) {
-    int p = 1;
-    while (p < x) {
-        p <<= 1;
-    }
-    return p;
+void show(int tenths) {
+    int total_seconds = tenths / 10;
+    int hours = total_seconds / 3600;
+    int minutes = total_seconds / 60 % 60;
+    int seconds = total_seconds % 60;
+    std::cout << hours << ':'
+              << std::setw(2) << std::setfill('0') << minutes << ':'
+              << std::setw(2) << std::setfill('0') << seconds << '\n';
 }
  
 int main() {
-    std::cout << next_pow2(5) << ' ' << next_pow2(64) << ' ' << next_pow2(100) << '\n';
+    show(3600000);
+    show(12345);
 }

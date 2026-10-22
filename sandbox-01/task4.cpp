@@ -1,12 +1,11 @@
+#include <cmath>
 #include <iostream>
  
-bool bit_is_set(int value, int n) {
-    return ((value >> n) & 1) == 1;
+int celsius(int f) {
+    double c = (f - 32) * 5.0 / 9.0;
+    return (int)std::lround(c);
 }
  
 int main() {
-    int value = 6;
-    for (int n = 0; n <= 2; ++n) {
-        std::cout << bit_is_set(value, n) << (n < 2 ? " " : "\n");
-    }
+    std::cout << celsius(100) << ' ' << celsius(0) << ' ' << celsius(212) << '\n';
 }
