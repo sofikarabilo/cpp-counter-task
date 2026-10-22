@@ -1,4 +1,3 @@
-ask2 · CPP
 #include <iostream>
  
 int next_pow2(int x) {
